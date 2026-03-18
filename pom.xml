@@ -40,6 +40,20 @@
     <checkstyle.suppressions.location>checkstyle-suppressions.xml</checkstyle.suppressions.location>
   </properties>
 
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <release>11</release>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
   <modules>
     <module>cluster</module>
     <module>cluster-api</module>
