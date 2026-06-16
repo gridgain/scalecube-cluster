@@ -50,9 +50,27 @@
             <release>11</release>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>external</id>
+      <name>GridGain Nexus Releases</name>
+      <url>https://maven.gridgain.com/nexus/content/repositories/external/</url>
+    </repository>
+    <snapshotRepository>
+      <id>gridgain-snapshots</id>
+      <name>GridGain Nexus Snapshots</name>
+      <url>https://maven.gridgain.com/nexus/content/repositories/gridgain-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <modules>
     <module>cluster</module>
